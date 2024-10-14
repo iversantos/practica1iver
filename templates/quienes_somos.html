@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos</title>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, #f2f2f2, #fff);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .card p {
+            margin-bottom: 20px;
+        }
+        
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .card li {
+            margin-bottom: 10px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+        
+        footer img {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <center><h1 style="color: red;">EMPRESA "ENTRE AMIGOS"</h1></center>
+    </header>
+    <div class="card">
+        <h2>Historia Breve</h2>
+        <p>"Entre Amigos Tienda para Mascotas" nació de la pasión por los animales. </p>
+        <p>Se decidió crear un espacio donde los dueños de mascotas pudieran encontrar todo lo que necesitan para el bienestar de sus compañeros peludos.</p>
+        <p>Fundada en 2010, la tienda comenzó como un pequeño local en Villa Fatima y rápidamente se ganó la confianza de los clientes gracias a su </p>
+        <p>amplia variedad de productos y la atención personalizada de su equipo.</p>
+        <p>Con el paso de los años, "Entre Amigos" se ha expandido, abriendo nuevas sucursales y desarrollando su propia línea de alimentos y accesorios. </p>
+    </div>
+    <div class="card">
+        <h2>MISION Y VISION DE LA EMPRESA</h2>
+        <h3 style="color: red;">Mision</h3>
+        <ul>
+            <li><a style="color: orange;">Enfoque en el bienestar animal:</a> "Nuestra misión es mejorar la calidad de vida de las mascotas, 
+            ofreciendo productos y servicios de alta calidad que promuevan su salud y bienestar."</li>
+            <br>
+            <li><a style="color: orange;">Conexión con la comunidad:</a> "Ser la tienda de confianza para los dueños de mascotas, 
+            creando una comunidad donde compartamos nuestro amor por los animales y promovamos la adopción responsable."</li>
+            <br>
+            <li><a style="color: orange;">Sostenibilidad:</a> "Promover un estilo de vida responsable con el medio ambiente, 
+            ofreciendo productos ecológicos y fomentando la adopción de prácticas sostenibles en el cuidado de las mascotas."</li>
+        </ul>
+        <h3 style="color: red;">Vision</h3>
+        <ul>
+            <li><a style="color: orange;">Liderazgo en el mercado:</a> "Ser la tienda de mascotas líder en la región, 
+            ofreciendo la mayor variedad de productos y servicios de la más alta calidad."</li>
+            <br>
+            <li><a style="color: orange;">Impacto social:</a> "Ser reconocidos como una empresa socialmente responsable, 
+            contribuyendo al bienestar de las mascotas y de la comunidad."</li>
+            <br>
+            <li><a style="color: orange;">style="color: orange;"Innovación:</a> "Ser pioneros en la introducción de nuevos productos y servicios 
+            innovadores que mejoren la vida de las mascotas y sus dueños."</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h2>DESCRIPCION DEL EQUIPO DE TRABAJO</h2>
+        <p>"Nuestro equipo está compuesto por un grupo apasionado de amantes de las mascotas,</p>
+        <p>con amplia experiencia en el cuidado animal. Cada miembro aporta un conjunto único de habilidades y conocimientos para garantizar que tus mascotas reciban la mejor atención."</p>
+    </div>
+    <footer>
+        <img src="{{ url_for('static',filename='imagenes/Tienda.png')}}" alt="Tienda" width="200">
+        <img src="{{ url_for('static',filename='imagenes/Tienda2.png')}}" alt="Tienda" width="300">
+        <img src="{{ url_for('static',filename='imagenes/Tienda3.png')}}" alt="Tienda" width="240">
+    </footer>
+
+</body>
+</html>

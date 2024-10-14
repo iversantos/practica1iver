@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias y Contacto</title>
+    <style>
+        /* Styles for news page */
+        .noticias-detalle {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .noticias-detalle h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .noticias-detalle img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 300px; /* adjust the max-width to your desired value */
+            height: auto;
+            border-radius: 10px 10px 0 0;
+            margin: 10px;
+          }
+        .noticias-detalle p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .contacto-detalle {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contacto-detalle h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .contacto-detalle form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .contacto-detalle label {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .contacto-detalle input, .contacto-detalle textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .contacto-detalle button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .contacto-detalle button:hover {
+            background-color: #3e8e41;
+        }
+        .info-contacto {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="noticias-detalle">
+        <center><h1  style="color: red;">NOTICIAS</h1></center>
+        <center><h1>NOTICIA 1: JORNADA DE ADOPCION </h1></center>
+        <center><img src="{{ url_for('static',filename='imagenes/noticia1.jpg')}}" alt="Noticia 1" width="200"></center>
+        <p>Entre los caninos que esperan encontrar una familia están adorables compañeros, 
+        quienes, tras haber sido rehabilitados, están listos para brindar el amor incondicional 
+        que caracteriza a los animales de compañía. La jornada será una excelente ocasión 
+        para que quienes estén buscando una mascota puedan conocer y enamorarse de uno de estos 
+        fieles amigos que, con paciencia y dedicación, aguardan la llegada de un hogar donde puedan ser felices para siempre.</p>
+    </div>
+
+    <div class="noticias-detalle">
+    <center><h1>Noticia 2: LOS MEJORES JUGUETES PARA PERROS Y GATOS QUE PUEDES ADQUIRIR EN LA TIENDA</h1></center>
+        <center><img src="{{ url_for('static',filename='imagenes/noticia2.jpg')}}" width="200"></center>
+        <p>¿Buscas los mejores juguetes para mantener a tu mascota feliz y activa? ¡En 'Entre Amigos' los tenemos! 
+        Hemos seleccionado cuidadosamente una amplia gama de juguetes de alta calidad, diseñados para estimular los 
+        sentidos y el instinto natural de juego de tu perro o gato. Desde peluches interactivos hasta juguetes que 
+        desafían su inteligencia, en nuestra tienda encontrarás todo lo que necesitas para fortalecer el vínculo 
+        con tu compañero peludo. </p>
+    </div>   
+
+    <div class="noticias-detalle">
+    <center><h1>NOTICIA 3: LAS NOVEDADES QUE TRAE LA FERIA PARA LOS AMIGOS PELUDOS</h1></center>
+        <center><img src="{{ url_for('static',filename='imagenes/noticia3.jpg')}}" alt="Noticia 3" width="200"></center>
+        <p>¡Prepárate para vivir una experiencia única junto a tu mascota! Nuestra feria te trae las últimas novedades 
+        en productos y servicios para el cuidado y bienestar de tus amigos peludos.
+        Descubre una amplia variedad de alimentos naturales, juguetes interactivos, accesorios de moda y mucho más. 
+        Además, podrás disfrutar de demostraciones de adiestramiento, concursos de disfraces y áreas de juego para que 
+        tu mascota se divierta al máximo.</p>
+    </div>
+
+    <div class="contacto-detalle">
+        <h1>Contáctanos</h1>
+        <form id="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo"><br><br>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje"></textarea><br><br>
+            <button id="enviar">Enviar</button>
+        </form>
+        <div id="mensaje-enviado" style="display: none;">
+            <p>Su mensaje ha sido enviado con éxito. Gracias por contactarnos.</p>
+        </div>
+        <div class="info-contacto">
+            <p>Dirección: Villa Fatima, La Paz, Bolivia</p>
+            <p>Teléfono: 64038992</p>
+            <p>Correo electrónico: <a href="mailto:left4dead@gmail.com">left4dead@gmail.com</a></p>
+        </div>
+    </div>
+    <script>
+        const formulario = document.getElementById('formulario');
+        const mensajeEnviado = document.getElementById('mensaje-enviado');
+
+        formulario.addEventListener('submit', (e) => {
+            e.preventDefault();
+            mensajeEnviado.style.display = 'block';
+            formulario.reset();
+        });
+    </script>
+</body>
+</html>
+            

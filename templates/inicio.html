@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Agregamos un fondo bonito */
+        body {
+            background-image: linear-gradient(to bottom, #f2f2f2, #fff);
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Ordenamos un poco el contenido */
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav li {
+            margin-right: 20px;
+        }
+        
+        nav a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+        
+        nav a:hover {
+            color: #23527c;
+        }
+        
+        footer {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        /* Centramos el logo */
+        header {
+            text-align: center;
+        }
+        
+        header img {
+            margin: 20px auto;
+            display: block;
+        }
+        
+        {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .destacados h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .destacados ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .destacados li {
+            margin-bottom: 10px;
+        }
+        
+        .destacados a {
+            color: #337ab7;
+            text-decoration: none;
+        }
+        
+        .destacados a:hover {
+            color: #23527c;
+        }
+        
+        .boton-llamada {
+            background-color: #337ab7;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .boton-llamada:hover {
+            background-color: #23527c;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="color: red;">EMPRESA ENTRE AMIGOS "TIENDA PARA MASCOTAS"</h1>
+        <img src="{{ url_for('static',filename='imagenes/logo.png.webp')}}" alt="Logotipo de la Empresa" width="250">
+        
+    </header>
+
+    <section>
+        <h2>PRODUCTOS Y SERVICIOS</h2>
+        <p>Ofrecemos una amplia variedad de productos y servicios de alta calidad para el bienestar de tus compañeros peludos.</p>
+        <p>Te ofrecemos desde alimentos premium y accesorios divertidos, hasta servicios de peluquería y asesoría veterinaria. 
+        Encontrarás todo lo que necesitas para que tu mascota viva feliz y saludable.</p>
+    </section>
+
+  <div class="card">
+    <nav>
+        <center><h2>MENU</h2></center>
+        <ul >
+            <li><a href="quienes_somos.html">QUIENES SOMOS</a></li>
+            <li><a href="servicios.html">SERVICIOS</a></li>
+            <li><a href="noticias.html">NOTICIAS</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+    </nav>
+</div>
+
+    <section>
+        <center><h2>TESTIMONIO DE CLIENTES</h2></center>
+        <blockquote>Maria - "Desde que compro el alimento natural para mi perro en la empresa Entre Amigos, su pelaje brilla más y tiene mucha más energía."</blockquote>
+        <blockquote>Juan - "Entre Amigos es mi tienda de mascotas favorita. Siempre encuentro todo lo que necesito para mis gatos y el personal es súper amable."</blockquote>
+        <blockquote>Ana - "Gracias a los consejos del equipo de la empresa Entre Amigos, mi conejo se ha vuelto mucho más sociable."</blockquote>
+    </section>
+
+
+    <section class="destacados">
+        <h2>¿Por qué elegirnos?</h2>
+        <h3>"Ventajas"</h3>
+        <ul>
+            <li>Productos de alta calidad para el bienestar de tus mascotas</li>
+            <li>Servicios de peluquería y asesoría veterinaria</li>
+            <li>Atención personalizada y amable</li>
+        </ul>
+        <p>¡Descubre por qué nuestros clientes nos aman!</p>
+        <a href="#" class="boton-llamada" style="color: white;">Conoce más</a>
+    </section>
+
+  
+    <footer>
+        <h2>¡Síguenos en Redes Sociales!</h2>
+        <a href="https://facebook.com">Facebook</a> |
+        <a href="https://twitter.com">Twitter</a> |
+        <a href="https://instagram.com">Instagram</a>
+    </footer>
+
+</body>
+</html>

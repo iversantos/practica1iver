@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios</title>
+    <style>
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .service {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .service h3 {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        
+        .service p {
+            margin-bottom: 20px;
+        }
+        
+        .service button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .service button:hover {
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <center><h2>SERVICIOS</h2></center>
+        <div class="service-grid">
+            <div class="service">
+                <img src="{{ url_for('static',filename='imagenes/veterinaria.jpg')}}" alt="veterinaria">
+                <h3>Servicio 1: Consulta Veterinaria</h3>
+                <p>Nuestra consulta veterinaria ofrece atención médica de alta calidad para tus mascotas. 
+                Nuestros veterinarios experimentados y amigables se encargan de diagnosticar y tratar una 
+                variedad de condiciones médicas, desde enfermedades comunes hasta problemas crónicos.
+                Ofrecemos servicios de consulta, vacunación, análisis de laboratorio y más.</p>
+            </div>
+            <div class="service">
+                <img src="{{ url_for('static',filename='imagenes/baño.jpg')}}" alt="baño">
+                <h3>Servicio 2: Baño y Peluquería</h3>
+                <p>Nuestro servicio de baño y peluquería es el lugar perfecto para que tus mascotas se sientan frescas y limpias.
+                 Nuestros expertos en peluquería utilizan productos de alta calidad y técnicas avanzadas para dejar a tus mascotas
+                 con un aspecto y olor fresco. Ofrecemos servicios de baño, corte de pelo, limpieza de oídos y más.</p>
+            </div>
+            <div class="service">
+                <img src="{{ url_for('static',filename='imagenes/hotel.png')}}" alt="hotel" width="-">
+                <h3>Servicio 3: Hotel para Mascotas</h3>
+                <p>Nuestro hotel para mascotas es un lugar seguro y acogedor donde tus mascotas pueden relajarse y divertirse mientras 
+                tú estás fuera. Ofrecemos habitaciones cómodas y limpias, áreas de juego y ejercicio, y atención personalizada para cada 
+                mascota. Nuestro personal amigable y experimentado se encargará de que tus mascotas se sientan como en casa.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
